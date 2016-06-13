@@ -12,8 +12,8 @@ import java.util.List;
  * Created by walden on 16/6/13.
  */
 @Service
-@Qualifier(value = "sexSelectService")
-public class SelectServiceImpl<SexEntity> implements ISelectService<SexEntity> {
+@Qualifier("testSelectService")
+public class TestSelectService<SexEntity> implements ISelectService<SexEntity> {
 
     @Autowired
     private SexDao sexDao;

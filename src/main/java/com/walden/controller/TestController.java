@@ -4,6 +4,7 @@ import com.walden.dao.SexDao;
 import com.walden.entity.SexEntity;
 import com.walden.service.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,12 @@ import java.util.List;
 @RequestMapping("/first")
 public class TestController {
     @Autowired
+    @Qualifier("sexSelectService")
     private ISelectService selectService;
+
+    @Autowired
+    @Qualifier("testSelectService")
+    private ISelectService testSelectService;
 
     @RequestMapping("/test")
     @ResponseBody
@@ -32,6 +38,6 @@ public class TestController {
     @RequestMapping("t2")
     @ResponseBody
     public SexEntity t2(@WebParam(name = "type")String type){
-        return (SexEntity) selectService.selectBy(type);
+        return (SexEntity) testSelectService.selectBy(type);
     }
 }
