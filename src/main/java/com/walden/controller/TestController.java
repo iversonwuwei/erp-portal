@@ -2,6 +2,7 @@ package com.walden.controller;
 
 import com.walden.dao.SexDao;
 import com.walden.entity.SexEntity;
+import com.walden.service.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -18,25 +19,19 @@ import java.util.List;
 @Controller
 @RequestMapping("/first")
 public class TestController {
-
-
     @Autowired
-    private SexDao sexDao;
-
+    private ISelectService selectService;
 
     @RequestMapping("/test")
     @ResponseBody
     public List<SexEntity> test(){
 
-        for (com.walden.entity.SexEntity sexEntity : sexDao.selectAll()){
-            System.out.println(sexEntity.getSex_type());
-        }
-        return sexDao.selectAll();
+        return selectService.selectAll();
     }
 
     @RequestMapping("t2")
     @ResponseBody
     public SexEntity t2(@WebParam(name = "type")String type){
-        return sexDao.getSexByType(type);
+        return (SexEntity) selectService.selectBy(type);
     }
 }
