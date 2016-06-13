@@ -13722,59 +13722,62 @@
         <data-type>varchar(45)</data-type>
       </column>
       <column id="68" parent="7" name="delivery_date_time">
-        <data-type>datetime</data-type>
+        <data-type>varchar(45)</data-type>
       </column>
       <column id="69" parent="7" name="submmited_date_time">
-        <data-type>datetime</data-type>
+        <data-type>varchar(45)</data-type>
       </column>
       <column id="70" parent="7" name="order_status">
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="71" parent="7" name="PRIMARY">
+      <column id="71" parent="7" name="customer_email">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="72" parent="7" name="PRIMARY">
         <columns>order_id</columns>
         <primary>1</primary>
       </key>
-      <column id="72" parent="8" name="role_id">
+      <column id="73" parent="8" name="role_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="73" parent="8" name="role_name">
+      <column id="74" parent="8" name="role_name">
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="74" parent="8" name="PRIMARY">
+      <key id="75" parent="8" name="PRIMARY">
         <columns>role_id</columns>
         <primary>1</primary>
       </key>
-      <column id="75" parent="9" name="id">
+      <column id="76" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="76" parent="9" name="sex_type">
+      <column id="77" parent="9" name="sex_type">
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="77" parent="9" name="PRIMARY">
+      <key id="78" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="78" parent="10" name="status_id">
+      <column id="79" parent="10" name="status_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="79" parent="10" name="status_type">
+      <column id="80" parent="10" name="status_type">
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="80" parent="10" name="PRIMARY">
+      <key id="81" parent="10" name="PRIMARY">
         <columns>status_id</columns>
         <primary>1</primary>
       </key>
-      <column id="81" parent="11" name="is_online_id">
+      <column id="82" parent="11" name="is_online_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="82" parent="11" name="is_online_type">
+      <column id="83" parent="11" name="is_online_type">
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="83" parent="11" name="PRIMARY">
+      <key id="84" parent="11" name="PRIMARY">
         <columns>is_online_id</columns>
         <primary>1</primary>
       </key>
