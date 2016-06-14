@@ -206,5 +206,10 @@
   </dependencies>
   <build>
     <finalName>portal</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>

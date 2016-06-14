@@ -22,7 +22,7 @@ public class TestSelectService<SexEntity> implements ISelectService<SexEntity> {
         return (List<SexEntity>) sexDao.selectAll();
     }
 
-    public SexEntity selectBy(String t) {
-        return (SexEntity) sexDao.getSexByType(t);
+    public List<SexEntity> selectBy(String t) {
+        return (List<SexEntity>) sexDao.getSexByType(t);
     }
 }
