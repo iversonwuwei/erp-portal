@@ -17,6 +17,7 @@ public class OrderSelectServiceImpl<OrderEntity> implements ISelectService<Order
 
     @Autowired
     private OrderDao orderDao;
+    private List<OrderEntity> orders;
 
     public List<OrderEntity> selectAll() {
         return (List<OrderEntity>) orderDao.selectOrders();

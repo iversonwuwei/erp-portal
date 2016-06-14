@@ -1,5 +1,6 @@
 package com.walden.implement;
 
+import com.walden.common.IConverter;
 import com.walden.dao.OrderDao;
 import com.walden.service.IInsertService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,11 @@ public class InsertServiceImpl<OrderEntity> implements IInsertService<OrderEntit
 
     @Autowired
     private OrderDao orderDao;
+    @Autowired
+    private IConverter convert;
 
     public void insert(OrderEntity orderEntity) {
+        orderEntity = (OrderEntity) convert.convert(orderEntity);
         orderDao.insertInto((com.walden.entity.OrderEntity) orderEntity);
     }
 }
