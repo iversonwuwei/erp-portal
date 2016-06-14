@@ -12,7 +12,6 @@ import java.util.Date;
 @Component
 public class DateTimerHelper {
 
-    private String format;
     private DateFormat dateFormat;
 
     public DateTimerHelper(){
