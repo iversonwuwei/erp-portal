@@ -1,19 +1,19 @@
 package com.walden.controller;
 
-import com.walden.dao.SexDao;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.walden.entity.OrderEntity;
 import com.walden.entity.SexEntity;
 import com.walden.service.IInsertService;
 import com.walden.service.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.jws.WebParam;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,10 +26,6 @@ public class TestController {
     @Qualifier("sexSelectService")
     private ISelectService selectService;
 
-    @Autowired
-    @Qualifier("testSelectService")
-    private ISelectService testSelectService;
-
     @Qualifier("insertServiceImpl")
     @Autowired
     private IInsertService iInsertService;
@@ -40,12 +36,6 @@ public class TestController {
     public List<SexEntity> test(){
 
         return selectService.selectAll();
-    }
-
-    @RequestMapping("t2")
-    @ResponseBody
-    public SexEntity t2(@WebParam(name = "type")String type){
-        return (SexEntity) testSelectService.selectBy(type);
     }
 
     @RequestMapping("/insert")
@@ -66,6 +56,7 @@ public class TestController {
         orderEntity.setTotal_price("123");
         orderEntity.setTurf_quanutity("45");
         orderEntity.setTurf_varity("34");
+
         iInsertService.insert(orderEntity);
         return "Insert Completed!";
     }
