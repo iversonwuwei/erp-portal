@@ -1,160 +1,117 @@
 package com.walden.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
- * Created by walden on 16/6/13.
+ * Created by walden on 16/6/16.
  */
 @Entity
-@Table(name = "driver", schema = "goTurf", catalog = "")
+@Table(name = "driver", schema = "goTurf")
 public class DriverEntity {
-    private int driverId;
-    private String driverName;
-    private String driverCompany;
-    private String driverSex;
-    private String driverAge;
-    private String driverHealth;
-    private String isOnline;
-    private String driverContactNumber;
-    private String driverEmail;
-    private String driverAddress;
+
+    private String driver_id;
+    private String driver_name;
+    private String driver_company;
+    private String driver_sex;
+    private String driver_age;
+    private String driver_health;
+    private String is_online;
+    private String driver_contact_number;
+    private String driver_email;
+    private String driver_address;
+
 
     @Id
     @Column(name = "driver_id")
-    public int getDriverId() {
-        return driverId;
+    public String getDriver_id() {
+        return driver_id;
     }
 
-    public void setDriverId(int driverId) {
-        this.driverId = driverId;
-    }
-
-    @Basic
-    @Column(name = "driver_name")
-    public String getDriverName() {
-        return driverName;
-    }
-
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
-    }
-
-    @Basic
-    @Column(name = "driver_company")
-    public String getDriverCompany() {
-        return driverCompany;
-    }
-
-    public void setDriverCompany(String driverCompany) {
-        this.driverCompany = driverCompany;
-    }
-
-    @Basic
-    @Column(name = "driver_sex")
-    public String getDriverSex() {
-        return driverSex;
-    }
-
-    public void setDriverSex(String driverSex) {
-        this.driverSex = driverSex;
-    }
-
-    @Basic
-    @Column(name = "driver_age")
-    public String getDriverAge() {
-        return driverAge;
-    }
-
-    public void setDriverAge(String driverAge) {
-        this.driverAge = driverAge;
-    }
-
-    @Basic
-    @Column(name = "driver_health")
-    public String getDriverHealth() {
-        return driverHealth;
-    }
-
-    public void setDriverHealth(String driverHealth) {
-        this.driverHealth = driverHealth;
-    }
-
-    @Basic
     @Column(name = "is_online")
-    public String getIsOnline() {
-        return isOnline;
+    public String getIs_online() {
+        return is_online;
     }
 
-    public void setIsOnline(String isOnline) {
-        this.isOnline = isOnline;
-    }
-
-    @Basic
-    @Column(name = "driver_contact_number")
-    public String getDriverContactNumber() {
-        return driverContactNumber;
-    }
-
-    public void setDriverContactNumber(String driverContactNumber) {
-        this.driverContactNumber = driverContactNumber;
-    }
-
-    @Basic
-    @Column(name = "driver_email")
-    public String getDriverEmail() {
-        return driverEmail;
-    }
-
-    public void setDriverEmail(String driverEmail) {
-        this.driverEmail = driverEmail;
-    }
-
-    @Basic
     @Column(name = "driver_address")
-    public String getDriverAddress() {
-        return driverAddress;
+    public String getDriver_address() {
+        return driver_address;
     }
 
-    public void setDriverAddress(String driverAddress) {
-        this.driverAddress = driverAddress;
+    @Column(name = "driver_age")
+    public String getDriver_age() {
+        return driver_age;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        DriverEntity that = (DriverEntity) o;
-
-        if (driverId != that.driverId) return false;
-        if (driverName != null ? !driverName.equals(that.driverName) : that.driverName != null) return false;
-        if (driverCompany != null ? !driverCompany.equals(that.driverCompany) : that.driverCompany != null)
-            return false;
-        if (driverSex != null ? !driverSex.equals(that.driverSex) : that.driverSex != null) return false;
-        if (driverAge != null ? !driverAge.equals(that.driverAge) : that.driverAge != null) return false;
-        if (driverHealth != null ? !driverHealth.equals(that.driverHealth) : that.driverHealth != null) return false;
-        if (isOnline != null ? !isOnline.equals(that.isOnline) : that.isOnline != null) return false;
-        if (driverContactNumber != null ? !driverContactNumber.equals(that.driverContactNumber) : that.driverContactNumber != null)
-            return false;
-        if (driverEmail != null ? !driverEmail.equals(that.driverEmail) : that.driverEmail != null) return false;
-        if (driverAddress != null ? !driverAddress.equals(that.driverAddress) : that.driverAddress != null)
-            return false;
-
-        return true;
+    @Column(name = "driver_company")
+    public String getDriver_company() {
+        return driver_company;
     }
 
-    @Override
-    public int hashCode() {
-        int result = driverId;
-        result = 31 * result + (driverName != null ? driverName.hashCode() : 0);
-        result = 31 * result + (driverCompany != null ? driverCompany.hashCode() : 0);
-        result = 31 * result + (driverSex != null ? driverSex.hashCode() : 0);
-        result = 31 * result + (driverAge != null ? driverAge.hashCode() : 0);
-        result = 31 * result + (driverHealth != null ? driverHealth.hashCode() : 0);
-        result = 31 * result + (isOnline != null ? isOnline.hashCode() : 0);
-        result = 31 * result + (driverContactNumber != null ? driverContactNumber.hashCode() : 0);
-        result = 31 * result + (driverEmail != null ? driverEmail.hashCode() : 0);
-        result = 31 * result + (driverAddress != null ? driverAddress.hashCode() : 0);
-        return result;
+    @Column(name = "driver_contact_number")
+    public String getDriver_contact_number() {
+        return driver_contact_number;
+    }
+
+    @Column(name = "driver_email")
+    public String getDriver_email() {
+        return driver_email;
+    }
+
+    @Column(name = "driver_health")
+    public String getDriver_health() {
+        return driver_health;
+    }
+
+    @Column(name = "driver_name")
+    public String getDriver_name() {
+        return driver_name;
+    }
+
+    @Column(name = "driver_sex")
+    public String getDriver_sex() {
+        return driver_sex;
+    }
+
+    public void setIs_online(String is_online) {
+        this.is_online = is_online;
+    }
+
+    public void setDriver_address(String driver_address) {
+        this.driver_address = driver_address;
+    }
+
+    public void setDriver_age(String driver_age) {
+        this.driver_age = driver_age;
+    }
+
+    public void setDriver_company(String driver_company) {
+        this.driver_company = driver_company;
+    }
+
+    public void setDriver_contact_number(String driver_contact_number) {
+        this.driver_contact_number = driver_contact_number;
+    }
+
+    public void setDriver_email(String driver_email) {
+        this.driver_email = driver_email;
+    }
+
+    public void setDriver_health(String driver_health) {
+        this.driver_health = driver_health;
+    }
+
+    public void setDriver_id(String driver_id) {
+        this.driver_id = driver_id;
+    }
+
+    public void setDriver_name(String driver_name) {
+        this.driver_name = driver_name;
+    }
+
+    public void setDriver_sex(String driver_sex) {
+        this.driver_sex = driver_sex;
     }
 }

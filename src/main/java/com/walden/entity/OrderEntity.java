@@ -24,6 +24,10 @@ public class OrderEntity {
     private String submitted_date_time;
     private String order_status;
     private String customer_email;
+    private String last_modified;
+    private String modifier;
+    private String turf_type;
+    private String is_delete;
 
     public OrderEntity(){
 
@@ -90,7 +94,7 @@ public class OrderEntity {
         return owner;
     }
 
-    @Column(name = "submmited_date_time")
+    @Column(name = "submitted_date_time")
     public String getSubmitted_date_time() {
         return submitted_date_time;
     }
@@ -108,6 +112,26 @@ public class OrderEntity {
     @Column(name = "turf_varity")
     public String getTurf_varity() {
         return turf_varity;
+    }
+
+    @Column(name = "last_modified")
+    public String getLast_modified() {
+        return last_modified;
+    }
+
+    @Column(name = "modifier")
+    public String getModifier() {
+        return modifier;
+    }
+
+    @Column(name = "turf_type")
+    public String getTurf_type() {
+        return turf_type;
+    }
+
+    @Column(name = "is_delete")
+    public String getIs_delete() {
+        return is_delete;
     }
 
     public void setAddress_detail(String address_detail) {
@@ -164,5 +188,21 @@ public class OrderEntity {
 
     public void setTurf_varity(String turf_varity) {
         this.turf_varity = turf_varity;
+    }
+
+    public void setTurf_type(String turf_type) {
+        this.turf_type = turf_type;
+    }
+
+    public void setLast_modified(String last_modified) {
+        this.last_modified = last_modified;
+    }
+
+    public void setModifier(String modifier) {
+        this.modifier = modifier;
+    }
+
+    public void setIs_delete(String is_delete) {
+        this.is_delete = is_delete;
     }
 }

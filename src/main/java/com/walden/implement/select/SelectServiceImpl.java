@@ -1,4 +1,4 @@
-package com.walden.implement;
+package com.walden.implement.select;
 
 import com.walden.dao.SexDao;
 import com.walden.service.ISelectService;

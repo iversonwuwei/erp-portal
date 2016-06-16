@@ -1,4 +1,4 @@
-package com.walden.implement;
+package com.walden.implement.insert;
 
 import com.walden.common.IConverter;
 import com.walden.dao.OrderDao;

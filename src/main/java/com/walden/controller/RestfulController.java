@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import javax.jws.WebService;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -26,13 +25,6 @@ public class RestfulController {
     @Autowired
     @Qualifier("orderSelectService")
     private ISelectService orderSelectService;
-
-    @GET
-    @Path(value = "/test")
-    @Produces(value = MediaType.APPLICATION_JSON)
-    public String getRestString(){
-        return "Hello World";
-    }
 
 
     @GET

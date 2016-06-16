@@ -4,7 +4,9 @@ import com.walden.entity.OrderEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -12,10 +14,12 @@ import java.util.List;
  * Created by walden on 16/6/13.
  */
 @Component
+@Transactional
 public interface OrderDao {
 
-    @Insert("INSERT INTO `goTurf`.`order` (`order_id`,`owner`, `customer_name`, `customer_contact`, `turf_varity`, `turf_quanutity`, `cutter`, `driver`, `layer`, `total_price`, `address_detail`, `delivery_date_time`, `submmited_date_time`, `order_status`, `customer_email`) " +
-            "VALUES (#{orderEntity.order_id},'walden', 'walden', '123456', '12', '23', 'walden', 'walden', 'wadeln', '123', 'qweqweqeqwe', '2016', '2017', 'in progress', 'iverson.wuwei@gmail.com')")
+    @Insert("INSERT INTO `goTurf`.`order` (`order_id`,`owner`, `customer_name`, `customer_contact`, `turf_varity`, `turf_quanutity`, `cutter`, `driver`, `layer`, `total_price`, `address_detail`, `delivery_date_time`, `submitted_date_time`, `order_status`, `customer_email`,`last_modified`,`modifier`,`turf_type`,`is_delete`) " +
+            "VALUES (#{orderEntity.order_id},#{orderEntity.owner}, #{orderEntity.customer_name}, #{orderEntity.customer_contact},#{orderEntity.turf_varity}, #{orderEntity.turf_quanutity}, #{orderEntity.cutter}, #{orderEntity.driver}, #{orderEntity.layer}, #{orderEntity.total_price}, #{orderEntity.address_detail}, " +
+            "#{orderEntity.delivery_date_time}, #{orderEntity.submitted_date_time}, #{orderEntity.order_status}, #{orderEntity.customer_email}, #{orderEntity.last_modified}, #{orderEntity.modifier}, #{orderEntity.turf_type}, #{orderEntity.is_delete})")
     void insertInto(@Param(value = "orderEntity") OrderEntity orderEntity);
 
     @Select("SELECT * FROM goTurf.`order`")
@@ -23,4 +27,7 @@ public interface OrderDao {
 
     @Select("SELECT * FROM goTurf.`order` where order_id = #{orderid}")
     List<OrderEntity> selectById(String orderid);
+
+    @Update("UPDATE `goTurf`.`order` SET `is_delete`='1' WHERE `order_id`=#{orderid}")
+    void deleteOrderBy(String orderid);
 }
