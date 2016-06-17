@@ -66,8 +66,6 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
           <element id="library" level="project" name="Maven: com.thetransactioncompany:cors-filter:2.1.2" />
           <element id="library" level="project" name="Maven: com.thetransactioncompany:java-property-utils:1.9.1" />
-          <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
-          <element id="library" level="project" name="json-lib" />
         </element>
       </element>
       <element id="directory" name="META-INF">
