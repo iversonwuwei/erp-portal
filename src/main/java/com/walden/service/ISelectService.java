@@ -9,5 +9,5 @@ public interface ISelectService<T> {
 
     List<T> selectAll();
 
-    T selectBy(String t);
+    List<T> selectBy(String condition);
 }

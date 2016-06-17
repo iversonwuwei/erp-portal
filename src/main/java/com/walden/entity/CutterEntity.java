@@ -1,160 +1,116 @@
 package com.walden.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
- * Created by walden on 16/6/13.
+ * Created by walden on 16/6/16.
  */
 @Entity
-@Table(name = "cutter", schema = "goTurf", catalog = "")
+@Table(name = "cutter", schema = "goTurf")
 public class CutterEntity {
-    private int cutterId;
-    private String cutterName;
-    private String cutterSex;
-    private String cutterCompany;
-    private String cutterHealth;
-    private String cutterAge;
-    private String cutterContactNumber;
-    private String cutterAddress;
-    private String cutterEmail;
-    private String isOnline;
+
+    private String cutter_id;
+    private String cutter_name;
+    private String cutter_sex;
+    private String cutter_company;
+    private String cutter_health;
+    private String cutter_age;
+    private String cutter_contact_number;
+    private String cutter_address;
+    private String cutter_email;
+    private String is_online;
 
     @Id
     @Column(name = "cutter_id")
-    public int getCutterId() {
-        return cutterId;
+    public String getCutter_id() {
+        return cutter_id;
     }
 
-    public void setCutterId(int cutterId) {
-        this.cutterId = cutterId;
-    }
-
-    @Basic
-    @Column(name = "cutter_name")
-    public String getCutterName() {
-        return cutterName;
-    }
-
-    public void setCutterName(String cutterName) {
-        this.cutterName = cutterName;
-    }
-
-    @Basic
-    @Column(name = "cutter_sex")
-    public String getCutterSex() {
-        return cutterSex;
-    }
-
-    public void setCutterSex(String cutterSex) {
-        this.cutterSex = cutterSex;
-    }
-
-    @Basic
-    @Column(name = "cutter_company")
-    public String getCutterCompany() {
-        return cutterCompany;
-    }
-
-    public void setCutterCompany(String cutterCompany) {
-        this.cutterCompany = cutterCompany;
-    }
-
-    @Basic
-    @Column(name = "cutter_health")
-    public String getCutterHealth() {
-        return cutterHealth;
-    }
-
-    public void setCutterHealth(String cutterHealth) {
-        this.cutterHealth = cutterHealth;
-    }
-
-    @Basic
     @Column(name = "cutter_age")
-    public String getCutterAge() {
-        return cutterAge;
+    public String getCutter_age() {
+        return cutter_age;
     }
 
-    public void setCutterAge(String cutterAge) {
-        this.cutterAge = cutterAge;
+    @Column(name = "cutter_company")
+    public String getCutter_company() {
+        return cutter_company;
     }
 
-    @Basic
     @Column(name = "cutter_contact_number")
-    public String getCutterContactNumber() {
-        return cutterContactNumber;
+    public String getCutter_contact_number() {
+        return cutter_contact_number;
     }
 
-    public void setCutterContactNumber(String cutterContactNumber) {
-        this.cutterContactNumber = cutterContactNumber;
-    }
-
-    @Basic
-    @Column(name = "cutter_address")
-    public String getCutterAddress() {
-        return cutterAddress;
-    }
-
-    public void setCutterAddress(String cutterAddress) {
-        this.cutterAddress = cutterAddress;
-    }
-
-    @Basic
     @Column(name = "cutter_email")
-    public String getCutterEmail() {
-        return cutterEmail;
+    public String getCutter_email() {
+        return cutter_email;
     }
 
-    public void setCutterEmail(String cutterEmail) {
-        this.cutterEmail = cutterEmail;
+    @Column(name = "cutter_health")
+    public String getCutter_health() {
+        return cutter_health;
     }
 
-    @Basic
+    @Column(name = "cutter_name")
+    public String getCutter_name() {
+        return cutter_name;
+    }
+
+    @Column(name = "cutter_sex")
+    public String getCutter_sex() {
+        return cutter_sex;
+    }
+
     @Column(name = "is_online")
-    public String getIsOnline() {
-        return isOnline;
+    public String getIs_online() {
+        return is_online;
     }
 
-    public void setIsOnline(String isOnline) {
-        this.isOnline = isOnline;
+    @Column(name = "cutter_address")
+    public String getCutter_address() {
+        return cutter_address;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        CutterEntity that = (CutterEntity) o;
-
-        if (cutterId != that.cutterId) return false;
-        if (cutterName != null ? !cutterName.equals(that.cutterName) : that.cutterName != null) return false;
-        if (cutterSex != null ? !cutterSex.equals(that.cutterSex) : that.cutterSex != null) return false;
-        if (cutterCompany != null ? !cutterCompany.equals(that.cutterCompany) : that.cutterCompany != null)
-            return false;
-        if (cutterHealth != null ? !cutterHealth.equals(that.cutterHealth) : that.cutterHealth != null) return false;
-        if (cutterAge != null ? !cutterAge.equals(that.cutterAge) : that.cutterAge != null) return false;
-        if (cutterContactNumber != null ? !cutterContactNumber.equals(that.cutterContactNumber) : that.cutterContactNumber != null)
-            return false;
-        if (cutterAddress != null ? !cutterAddress.equals(that.cutterAddress) : that.cutterAddress != null)
-            return false;
-        if (cutterEmail != null ? !cutterEmail.equals(that.cutterEmail) : that.cutterEmail != null) return false;
-        if (isOnline != null ? !isOnline.equals(that.isOnline) : that.isOnline != null) return false;
-
-        return true;
+    public void setCutter_address(String cutter_address) {
+        this.cutter_address = cutter_address;
     }
 
-    @Override
-    public int hashCode() {
-        int result = cutterId;
-        result = 31 * result + (cutterName != null ? cutterName.hashCode() : 0);
-        result = 31 * result + (cutterSex != null ? cutterSex.hashCode() : 0);
-        result = 31 * result + (cutterCompany != null ? cutterCompany.hashCode() : 0);
-        result = 31 * result + (cutterHealth != null ? cutterHealth.hashCode() : 0);
-        result = 31 * result + (cutterAge != null ? cutterAge.hashCode() : 0);
-        result = 31 * result + (cutterContactNumber != null ? cutterContactNumber.hashCode() : 0);
-        result = 31 * result + (cutterAddress != null ? cutterAddress.hashCode() : 0);
-        result = 31 * result + (cutterEmail != null ? cutterEmail.hashCode() : 0);
-        result = 31 * result + (isOnline != null ? isOnline.hashCode() : 0);
-        return result;
+    public void setCutter_age(String cutter_age) {
+        this.cutter_age = cutter_age;
+    }
+
+    public void setCutter_company(String cutter_company) {
+        this.cutter_company = cutter_company;
+    }
+
+    public void setCutter_contact_number(String cutter_contact_number) {
+        this.cutter_contact_number = cutter_contact_number;
+    }
+
+    public void setCutter_email(String cutter_email) {
+        this.cutter_email = cutter_email;
+    }
+
+    public void setCutter_health(String cutter_health) {
+        this.cutter_health = cutter_health;
+    }
+
+    public void setCutter_id(String cutter_id) {
+        this.cutter_id = cutter_id;
+    }
+
+    public void setCutter_name(String cutter_name) {
+        this.cutter_name = cutter_name;
+    }
+
+    public void setCutter_sex(String cutter_sex) {
+        this.cutter_sex = cutter_sex;
+    }
+
+    public void setIs_online(String is_online) {
+        this.is_online = is_online;
     }
 }

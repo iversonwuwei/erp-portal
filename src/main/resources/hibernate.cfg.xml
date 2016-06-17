@@ -14,6 +14,7 @@
         <mapping class="com.walden.entity.RoleEntity"/>
         <mapping class="com.walden.entity.StatusEntity"/>
         <mapping class="com.walden.entity.IsOnlineEntity"/>
+        <mapping class="com.walden.entity.OrderEntity"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>
