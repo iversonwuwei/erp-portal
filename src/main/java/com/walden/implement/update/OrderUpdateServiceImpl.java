@@ -4,10 +4,12 @@ import com.walden.dao.OrderDao;
 import com.walden.entity.OrderEntity;
 import com.walden.service.IUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by walden on 16/6/16.
  */
+@Service
 public class OrderUpdateServiceImpl implements IUpdateService {
 
     @Autowired

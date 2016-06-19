@@ -49,8 +49,8 @@ public class TestController {
         orderEntity.setOrder_status("asds");
         orderEntity.setOwner("rrrr");
         orderEntity.setSubmitted_date_time("tttttt");
-        orderEntity.setTotal_price("123");
-        orderEntity.setTurf_quanutity("45");
+        orderEntity.setTotal_price(123);
+        orderEntity.setTurf_quanutity(45);
         orderEntity.setTurf_varity("34");
 
         iInsertService.insert(orderEntity);
