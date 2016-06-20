@@ -1,8 +1,8 @@
 package com.walden.implement.insert;
 
 import com.walden.common.IConverter;
-import com.walden.dao.OrderDao;
-import com.walden.service.IInsertService;
+import com.walden.dao.ui.OrderDao;
+import com.walden.service.database.IInsertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

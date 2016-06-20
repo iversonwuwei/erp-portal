@@ -1,11 +1,12 @@
 package com.walden.implement.common;
 
-import com.walden.common.ISaveAndRecover;
+import com.walden.common.IRead;
+import com.walden.common.ISave;
 
 /**
  * Created by walden on 16/6/17.
  */
-public class SaveAndRecoverImpl implements ISaveAndRecover {
+public class SaveAndRecoverImpl implements ISave, IRead {
 
     private String fileName;
 

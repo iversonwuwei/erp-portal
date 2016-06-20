@@ -1,7 +1,7 @@
 package com.walden.controller;
 
 import com.walden.entity.OrderEntity;
-import com.walden.service.IInsertService;
+import com.walden.service.database.IInsertService;
 import net.sf.json.JSONObject;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

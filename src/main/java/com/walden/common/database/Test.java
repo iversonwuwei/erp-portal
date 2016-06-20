@@ -1,6 +1,6 @@
-package com.walden.common;
+package com.walden.common.database;
 
-import com.walden.service.ISelectService;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -38,7 +38,7 @@ public class Test {
     private Map<String, List> maps;
 
     public Map<String, List> getMap(){
-        maps = new HashMap<String, List>();
+        maps = new HashMap<>();
         maps.put(DRIVERS, driverSelectService.selectAll());
         maps.put(CUTTERS, cutterSelectService.selectAll());
         maps.put(LAYERS, layerSelectService.selectAll());

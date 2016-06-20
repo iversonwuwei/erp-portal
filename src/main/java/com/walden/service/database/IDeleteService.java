@@ -1,4 +1,4 @@
-package com.walden.service;
+package com.walden.service.database;
 
 import org.springframework.stereotype.Service;
 

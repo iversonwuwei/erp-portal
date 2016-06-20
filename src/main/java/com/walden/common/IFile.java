@@ -1,7 +1,5 @@
 package com.walden.common;
 
-import com.walden.service.IDeleteService;
-
 /**
  * Created by walden on 16/6/17.
  */

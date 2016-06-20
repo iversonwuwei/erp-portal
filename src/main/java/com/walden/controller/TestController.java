@@ -2,14 +2,15 @@ package com.walden.controller;
 
 import com.walden.entity.OrderEntity;
 import com.walden.entity.SexEntity;
-import com.walden.service.IInsertService;
-import com.walden.service.ISelectService;
+import com.walden.service.database.IInsertService;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.ws.rs.client.Client;
 import java.util.List;
 
 /**

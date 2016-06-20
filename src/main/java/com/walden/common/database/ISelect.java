@@ -1,6 +1,4 @@
-package com.walden.common;
-
-import org.springframework.stereotype.Component;
+package com.walden.common.database;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.walden.controller;
 
-import com.walden.service.IDeleteService;
+import com.walden.service.database.IDeleteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
