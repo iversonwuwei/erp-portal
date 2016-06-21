@@ -5,9 +5,9 @@ import java.util.List;
 /**
  * Created by walden on 16/6/17.
  */
-public interface IRead<E> {
+public interface IRead {
 
     Object read(Object name);
 
-    List<E> readAllFiles();
+    Object readAllFiles();
 }
