@@ -1,14 +1,18 @@
 package com.walden.entity;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by walden on 16/6/20.
  */
+@Component
 public class FileEntity {
 
     private String fileName;
     private String savePath;
     private boolean canRead;
     private boolean canDelete;
+    private String jsonStringBuffer;
 
     public String getFileName() {
         return fileName;
@@ -40,5 +44,13 @@ public class FileEntity {
 
     public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
+    }
+
+    public String getJsonStringBuffer() {
+        return jsonStringBuffer;
+    }
+
+    public void setJsonStringBuffer(String jsonStringBuffer) {
+        this.jsonStringBuffer = jsonStringBuffer;
     }
 }

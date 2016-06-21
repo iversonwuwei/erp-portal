@@ -13,10 +13,6 @@ public class JsonSelectImpl implements IJsonSelect{
     private String searchString;
     private String selectedName;
 
-    public void setJsonString(String jsonString) {
-        this.jsonString = jsonString;
-    }
-
     public JsonSelectImpl(String jsonString){
         this.jsonString = jsonString;
     }

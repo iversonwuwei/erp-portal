@@ -21,6 +21,8 @@ public class DraftConvertHelper implements IConverter {
     private StringBuilder sb;
     private static final String DATEFORMATE = "yyyyMMddHHmmss";
 
+    public DraftConvertHelper(){}
+
     public DraftConvertHelper(String jsonString){
         this.jsonString = jsonString;
         jsonSelect = new JsonSelectImpl(jsonString);

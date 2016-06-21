@@ -5,5 +5,5 @@ package com.walden.common;
  */
 public interface ISave {
 
-    void save(Object savePath);
+    void save(Object o);
 }

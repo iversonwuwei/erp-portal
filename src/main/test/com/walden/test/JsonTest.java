@@ -1,6 +1,7 @@
 package com.walden.test;
 
 import com.walden.common.IConverter;
+import com.walden.entity.FileEntity;
 import com.walden.helper.DraftConvertHelper;
 import net.sf.json.JSONObject;
 
@@ -18,5 +19,10 @@ public class JsonTest {
         IConverter converter = new DraftConvertHelper(jsonStiring);
         String convertedString = (String) converter.convert("customer_name");
         System.out.println(convertedString);
+
+        FileEntity fileEntity = new FileEntity();
+        fileEntity.setJsonStringBuffer(jsonStiring);
+        fileEntity.setSavePath("/Users/walden/Desktop/save/");
+
     }
 }
