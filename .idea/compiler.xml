@@ -27,7 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="erp-persistence" target="1.5" />
-      <module name="erp-portal" target="1.5" />
+      <module name="erp-portal" target="1.7" />
       <module name="erp-website" target="1.5" />
       <module name="erp-website (1)" target="1.5" />
       <module name="website" target="1.5" />

@@ -1,4 +1,4 @@
-package com.walden.service;
+package com.walden.service.database;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.walden.dao;
+package com.walden.dao.ui;
 
 import com.walden.entity.DriverEntity;
 import org.apache.ibatis.annotations.Select;

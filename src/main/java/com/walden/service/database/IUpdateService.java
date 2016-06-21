@@ -1,4 +1,4 @@
-package com.walden.service;
+package com.walden.service.database;
 
 /**
  * Created by walden on 16/6/16.

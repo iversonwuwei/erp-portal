@@ -1,7 +1,7 @@
 package com.walden.implement.select;
 
-import com.walden.dao.DriverDao;
-import com.walden.service.ISelectService;
+import com.walden.dao.ui.DriverDao;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

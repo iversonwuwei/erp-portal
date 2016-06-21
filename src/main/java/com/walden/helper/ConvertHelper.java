@@ -13,6 +13,7 @@ public class ConvertHelper implements IConverter<OrderEntity> {
 
     private OrderEntity orderEntity;
     private StringBuilder sb;
+    private static final String DATEFORMATE = "yyyyMMddHHmmss";
     @Autowired
     private DateTimerHelper dateTimerHelper;
 
@@ -26,10 +27,10 @@ public class ConvertHelper implements IConverter<OrderEntity> {
         return this.orderEntity;
     }
 
-    private String OrderIdMaker(){
+    protected String OrderIdMaker(){
         sb = new StringBuilder();
         sb.append(orderEntity.getCustomer_name());
-        sb.append(dateTimerHelper.dateFormat("yyyyMMddHHmmss"));
+        sb.append(dateTimerHelper.dateFormat(DATEFORMATE));
         return sb.toString();
     }
 }

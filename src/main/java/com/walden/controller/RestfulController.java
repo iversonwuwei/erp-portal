@@ -2,7 +2,7 @@ package com.walden.controller;
 
 import com.walden.entity.OrderEntity;
 import com.walden.entity.SexEntity;
-import com.walden.service.ISelectService;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

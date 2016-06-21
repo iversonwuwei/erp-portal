@@ -1,4 +1,4 @@
-package com.walden.dao;
+package com.walden.dao.server;
 
 import com.walden.entity.RoleEntity;
 import org.apache.ibatis.annotations.Select;

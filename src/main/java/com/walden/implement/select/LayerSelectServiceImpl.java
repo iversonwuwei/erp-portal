@@ -1,10 +1,8 @@
 package com.walden.implement.select;
 
-import com.walden.dao.LayerDao;
-import com.walden.service.ISelectService;
+import com.walden.dao.ui.LayerDao;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

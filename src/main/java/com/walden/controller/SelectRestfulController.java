@@ -1,21 +1,19 @@
 package com.walden.controller;
 
-import com.walden.common.Test;
-import com.walden.entity.CutterEntity;
-import com.walden.entity.DriverEntity;
-import com.walden.entity.LayerEntity;
-import com.walden.entity.TurfEntity;
-import com.walden.service.ISelectService;
+import com.sun.tools.corba.se.idl.StringGen;
+import com.walden.common.database.Test;
+import com.walden.entity.*;
+import com.walden.service.ISaveAsDraft;
+import com.walden.service.ISelectAllDraftFile;
+import com.walden.service.database.ISelectService;
 import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.io.File;
 import java.util.List;
 
 /**
@@ -40,6 +38,12 @@ public class SelectRestfulController {
     @Qualifier("layerSelectServiceImpl")
     @Autowired
     private ISelectService layerSelectService;
+
+    @Autowired
+    private ISaveAsDraft saveAsDraft;
+
+    @Autowired
+    private ISelectAllDraftFile selectAllDraftFile;
 
     @Autowired
     private Test test;
@@ -83,5 +87,35 @@ public class SelectRestfulController {
     @Consumes(MediaType.APPLICATION_JSON)
     public String getJsonString(){
         return JSONArray.fromObject(test.getMap()).toString();
+    }
+
+    @POST
+    @Path("/saveasdraft")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void saveAsDraft(String data){
+        FileEntity fileEntity = new FileEntity();
+        fileEntity.setJsonStringBuffer(data);
+        fileEntity.setSavePath("/Users/walden/Desktop/save/");
+        saveAsDraft.saveAsDraft(fileEntity);
+        System.out.println(data);
+    }
+
+    @POST
+    @Path("/recoverFromJson")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String recoverFromDraft(@QueryParam(value = "draftid")String draftid){
+        File file = new File("/Users/walden/Desktop/save/"+draftid+".json");
+        String jsonString = saveAsDraft.recoverFromDraft(file);
+        return jsonString;
+    }
+
+    @GET
+    @Path("/alldraftfiles")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String getAllDraftFile(){
+        String jsonString = selectAllDraftFile.selectAll();
+        return jsonString;
     }
 }

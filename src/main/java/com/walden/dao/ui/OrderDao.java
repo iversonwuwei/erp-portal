@@ -1,4 +1,4 @@
-package com.walden.dao;
+package com.walden.dao.ui;
 
 import com.walden.entity.OrderEntity;
 import org.apache.ibatis.annotations.Insert;
@@ -34,6 +34,6 @@ public interface OrderDao {
 
     @Update("UPDATE `goTurf`.`order` SET `owner`=#{orderEntity.owner},`customer_name`=#{orderEntity.customer_name},`customer_contact`=#{orderEntity.customer_contact},`turf_varity`=#{orderEntity.turf_varity}," +
             "`turf_quanutity`=#{orderEntity.turf_quanutity},`cutter`=#{orderEntity.cutter},`driver`=#{orderEntity.driver},`layer`=#{orderEntity.layer},`total_price`=#{orderEntity.total_price},`address_detail`=#{orderEntity.address_detail},`delivery_date_time`=#{orderEntity.delivery_date_time}," +
-            "`submitted_date_time`=#{orderEntity.submitted_date_time},`order_status`=#{orderEntity.order_status},`customer_email`=#{orderEntity.customer_email},`last_modified`=#{orderEntity.last_modified},`modifier`=#{orderEntity.modifier},`turf_type`=#{orderEntity.turf_type},`turf_type`=#{} WHERE `order_id`=#{orderid}")
+            "`submitted_date_time`=#{orderEntity.submitted_date_time},`order_status`=#{orderEntity.order_status},`customer_email`=#{orderEntity.customer_email},`last_modified`=#{orderEntity.last_modified},`modifier`=#{orderEntity.modifier},`turf_type`=#{orderEntity.turf_type} WHERE `order_id`=#{orderEntity.order_id}")
     void updateOrder(@Param(value = "orderEntity")OrderEntity orderEntity);
 }
