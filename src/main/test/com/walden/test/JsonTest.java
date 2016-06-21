@@ -1,10 +1,12 @@
 package com.walden.test;
 
 import com.walden.common.IConverter;
+import com.walden.common.IDelete;
 import com.walden.common.IRead;
 import com.walden.common.ISave;
 import com.walden.entity.FileEntity;
 import com.walden.helper.DraftConvertHelper;
+import com.walden.service.common.DeleteJsonFile;
 import com.walden.service.common.ReadJsonFile;
 import com.walden.service.common.SaveAndCreateJsonFile;
 import net.sf.json.JSONObject;
@@ -31,10 +33,11 @@ public class JsonTest {
         fileEntity.setSavePath("/Users/walden/Desktop/save/");
 
         IRead read = new ReadJsonFile();
-        ISave save = new SaveAndCreateJsonFile();
-        save.save(fileEntity);
+        //ISave save = new SaveAndCreateJsonFile();
+        //save.save(fileEntity);
         //File file = new File("/Users/walden/Desktop/save/aadraft20160620153930.json");
-
+        IDelete delete = new DeleteJsonFile();
+        delete.delete("aadraft20160621163052.json");
         //String jsonString = (String) read.read(file);
         //System.out.println(jsonString);
 

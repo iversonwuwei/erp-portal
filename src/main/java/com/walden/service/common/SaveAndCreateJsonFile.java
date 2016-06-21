@@ -4,10 +4,10 @@ import com.walden.common.IConverter;
 import com.walden.common.ISave;
 import com.walden.entity.FileEntity;
 import com.walden.helper.DraftConvertHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  * Created by walden on 16/6/21.
@@ -16,12 +16,10 @@ import java.io.*;
 public class SaveAndCreateJsonFile implements ISave {
 
     private File file;
-    private OutputStream outputStream;
     private FileWriter fileWriter;
     private FileEntity fileEntity;
     private IConverter draftConvertHelper;
     private String fileName;
-    private String fileString;
 
     public SaveAndCreateJsonFile(){
 

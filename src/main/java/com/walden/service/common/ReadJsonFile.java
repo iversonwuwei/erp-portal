@@ -1,9 +1,11 @@
 package com.walden.service.common;
 
+import com.walden.common.IDelete;
 import com.walden.common.IRead;
 import net.sf.json.JSONArray;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -18,12 +20,12 @@ public class ReadJsonFile implements IRead {
 
     private static final Logger logger = LogManager.getLogger(ReadJsonFile.class);
     private File file;
-    private InputStream inputStream;
-    private char[] tempchars;
     private static final String DEFAULT_PATH = "/Users/walden/Desktop/save/";
     private FileReader fileReader;
     private BufferedReader bufferedReader;
     private String containString;
+    @Autowired
+    private IDelete deleteDraft;
 
 
     public ReadJsonFile(){
@@ -33,16 +35,16 @@ public class ReadJsonFile implements IRead {
     @Override
     public Object read(Object file) {
         this.file = (File) file;
-        tempchars = new char[600];
         try {
             if (this.file.exists()) {
                 fileReader = new FileReader(this.file);
                 bufferedReader = new BufferedReader(fileReader);
-                containString = bufferedReader.readLine();
-                while (fileReader.read(tempchars)!=-1){
-                    //System.out.println(String.valueOf(tempchars));
+                while (bufferedReader.ready()){
+                    containString = bufferedReader.readLine();
                 }
             }
+            fileReader.close();
+            bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
