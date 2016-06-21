@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Controller
 @Path(value = "/rest")
-public class RestfulController {
+public class RestController {
 
     @Autowired
     @Qualifier("sexSelectService")

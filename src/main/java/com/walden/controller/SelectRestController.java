@@ -21,7 +21,7 @@ import java.util.List;
  */
 @Controller
 @Path("/select")
-public class SelectRestfulController {
+public class SelectRestController {
 
     @Qualifier("turfSelectServiceImpl")
     @Autowired

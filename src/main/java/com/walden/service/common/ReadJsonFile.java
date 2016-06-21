@@ -59,7 +59,6 @@ public class ReadJsonFile implements IRead {
         String json;
         String id;
         Map<String, String> maps = new HashMap<>();
-        System.out.println(strings.length);
         for (int i=1; i< strings.length; i++){
             id = strings[i].substring(0, strings[i].indexOf("."));
             json = (String) read(files[i]);

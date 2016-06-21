@@ -16,7 +16,6 @@ public class DraftConvertHelper implements IConverter {
     @Autowired
     private DateTimerHelper dateTimerHelper;
 
-    private String jsonString;
     private String selectedString;
     private StringBuilder sb;
     private static final String DATEFORMATE = "yyyyMMddHHmmss";
@@ -24,7 +23,6 @@ public class DraftConvertHelper implements IConverter {
     public DraftConvertHelper(){}
 
     public DraftConvertHelper(String jsonString){
-        this.jsonString = jsonString;
         jsonSelect = new JsonSelectImpl(jsonString);
     }
 
