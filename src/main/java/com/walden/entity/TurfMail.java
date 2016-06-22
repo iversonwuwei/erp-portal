@@ -2,50 +2,86 @@ package com.walden.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "mail", schema = "goturf")
 public class TurfMail implements Serializable{
 	
-	public String getENCODEING() {
-		return ENCODEING;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+	private String mail_id;
+    private String mail_host;
+	private String mail_send;
+	private String use_name;
+	private String use_pass;
+	private String subject;
+	private String message;
+	
+
+	@Id
+    @Column(name = "mail_id")
+	public String getMail_id() {
+		return mail_id;
 	}
-	public  final String ENCODEING = "UTF-8";
-    private String host;
-	private String sender;
-	//private String receiver;
-	private String name;
-	private String username;
-	private String password;
-//	private String subject;
-//	private String message;
-	public String getHost() {
-		return host;
+	public void setMail_id(String mail_id) {
+		this.mail_id = mail_id;
 	}
-	public void setHost(String host) {
-		this.host = host;
+	
+	@Column(name = "mail_host")
+	public String getMail_host() {
+		return mail_host;
 	}
-	public String getSender() {
-		return sender;
+	public void setMail_host(String mail_host) {
+		this.mail_host = mail_host;
 	}
-	public void setSender(String sender) {
-		this.sender = sender;
+	
+	@Column(name = "mail_send")
+	public String getMail_send() {
+		return mail_send;
+	}
+	public void setMail_send(String mail_send) {
+		this.mail_send = mail_send;
+	}
+	
+	@Column(name = "use_name")
+	public String getUse_name() {
+		return use_name;
+	}
+	public void setUse_name(String use_name) {
+		this.use_name = use_name;
+	}
+	
+	@Column(name = "use_pass")
+	public String getUse_pass() {
+		return use_pass;
+	}
+	public void setUse_pass(String use_pass) {
+		this.use_pass = use_pass;
 	}
 
-	public String getName() {
-		return name;
+	
+	@Column(name = "subject")
+	public String getSubject() {
+		return subject;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
-	public String getUsername() {
-		return username;
+	
+	@Column(name = "message")
+	public String getMessage() {
+		return message;
 	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	
