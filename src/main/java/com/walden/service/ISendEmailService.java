@@ -1,5 +1,6 @@
 package com.walden.service;
 
+import com.walden.entity.CompanyEntity;
 import com.walden.entity.TurfMail;
 
 
@@ -8,5 +9,5 @@ import com.walden.entity.TurfMail;
  */
 public interface ISendEmailService {
 
-    void send(TurfMail mail) ;
+    void send(TurfMail mail,CompanyEntity company) ;
 }

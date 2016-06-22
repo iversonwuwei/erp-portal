@@ -10,12 +10,12 @@ public class TurfMail implements Serializable{
 	public  final String ENCODEING = "UTF-8";
     private String host;
 	private String sender;
-	private String receiver;
+	//private String receiver;
 	private String name;
 	private String username;
 	private String password;
-	private String subject;
-	private String message;
+//	private String subject;
+//	private String message;
 	public String getHost() {
 		return host;
 	}
@@ -28,12 +28,7 @@ public class TurfMail implements Serializable{
 	public void setSender(String sender) {
 		this.sender = sender;
 	}
-	public String getReceiver() {
-		return receiver;
-	}
-	public void setReceiver(String receiver) {
-		this.receiver = receiver;
-	}
+
 	public String getName() {
 		return name;
 	}
@@ -51,18 +46,6 @@ public class TurfMail implements Serializable{
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getSubject() {
-		return subject;
-	}
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	public String getMessage() {
-		return message;
-	}
-	public void setMessage(String message) {
-		this.message = message;
 	}
 
 	

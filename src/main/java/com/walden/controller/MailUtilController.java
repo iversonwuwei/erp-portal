@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.walden.entity.CompanyEntity;
 import com.walden.entity.TurfMail;
 import com.walden.service.ISendEmailService;
 
@@ -20,9 +21,9 @@ public class MailUtilController {
 	 
 	 @RequestMapping("/send")
 	 @ResponseBody
-	 public boolean send(TurfMail mail) throws EmailException{
+	 public boolean send(TurfMail mail,CompanyEntity company) throws EmailException{
 		 
-		iSendEmailService.send(mail);
+		iSendEmailService.send(mail,company);
 		return true;
 	 }
 }
