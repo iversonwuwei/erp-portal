@@ -3,13 +3,17 @@ package com.walden.service.common;
 import com.walden.common.IDelete;
 import com.walden.common.IRead;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,8 +28,6 @@ public class ReadJsonFile implements IRead {
     private FileReader fileReader;
     private BufferedReader bufferedReader;
     private String containString;
-    @Autowired
-    private IDelete deleteDraft;
 
 
     public ReadJsonFile(){
@@ -52,20 +54,34 @@ public class ReadJsonFile implements IRead {
     }
 
     @Override
-    public String readAllFiles() {
+    public Object readAllFiles() {
         file = new File(DEFAULT_PATH);
         String[] strings = file.list();
         File[] files = file.listFiles();
         String json;
         String id;
-        Map<String, String> maps = new HashMap<>();
+        List drafts = new ArrayList();
         for (int i=1; i< strings.length; i++){
             id = strings[i].substring(0, strings[i].indexOf("."));
             json = (String) read(files[i]);
-            maps.put(id, json);
+            drafts.add(getJSONObject(json, "draft_id", id));
         }
-        JSONArray jsonArray = JSONArray.fromObject(maps);
+        JSONArray jsonArray = JSONArray.fromObject(drafts);
         System.out.println(jsonArray.toString());
-        return jsonArray.toString();
+        return jsonArray;
+    }
+
+    protected JSONObject getJSONObject(String target, String id, String value){
+        JSONObject jsonObject = null;
+
+        if (target != null || !target.equals("")){
+            try{
+                jsonObject = JSONObject.fromObject(target);
+                jsonObject.put(id, value);
+            }catch (Exception e){
+                e.getMessage();
+            }
+        }
+        return jsonObject;
     }
 }

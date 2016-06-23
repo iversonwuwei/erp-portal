@@ -1,6 +1,5 @@
 package com.walden.controller;
 
-import com.sun.tools.corba.se.idl.StringGen;
 import com.walden.common.database.Test;
 import com.walden.entity.*;
 import com.walden.service.ISaveAsDraft;
@@ -114,8 +113,8 @@ public class SelectRestController {
     @Path("/alldraftfiles")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public String getAllDraftFile(){
-        String jsonString = selectAllDraftFile.selectAll();
+    public JSONArray getAllDraftFile(){
+        JSONArray jsonString = (JSONArray) selectAllDraftFile.selectAll();
         return jsonString;
     }
 }

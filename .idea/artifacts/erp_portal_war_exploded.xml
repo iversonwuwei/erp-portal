@@ -15,6 +15,10 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jms:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.6" />
@@ -66,6 +70,11 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
           <element id="library" level="project" name="Maven: com.thetransactioncompany:cors-filter:2.1.2" />
           <element id="library" level="project" name="Maven: com.thetransactioncompany:java-property-utils:1.9.1" />
+          <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
+          <element id="library" level="project" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" />
         </element>
       </element>
       <element id="directory" name="META-INF">
