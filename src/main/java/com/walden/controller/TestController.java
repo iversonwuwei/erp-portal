@@ -2,19 +2,21 @@ package com.walden.controller;
 
 import com.walden.entity.OrderEntity;
 import com.walden.entity.SexEntity;
-import com.walden.service.IInsertService;
-import com.walden.service.ISelectService;
+import com.walden.service.database.IInsertService;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.ws.rs.client.Client;
 import java.util.List;
 
 /**
  * Created by walden on 16/5/30.
  */
+
 @Controller
 @RequestMapping("/first")
 public class TestController {
@@ -49,8 +51,8 @@ public class TestController {
         orderEntity.setOrder_status("asds");
         orderEntity.setOwner("rrrr");
         orderEntity.setSubmitted_date_time("tttttt");
-        orderEntity.setTotal_price("123");
-        orderEntity.setTurf_quanutity("45");
+        orderEntity.setTotal_price(123);
+        orderEntity.setTurf_quanutity(45);
         orderEntity.setTurf_varity("34");
 
         iInsertService.insert(orderEntity);

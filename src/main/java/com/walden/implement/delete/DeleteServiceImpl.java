@@ -1,7 +1,7 @@
 package com.walden.implement.delete;
 
-import com.walden.dao.OrderDao;
-import com.walden.service.IDeleteService;
+import com.walden.dao.ui.OrderDao;
+import com.walden.service.database.IDeleteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,7 @@
 package com.walden.implement.select;
 
-import com.walden.dao.RoleDao;
-import com.walden.entity.RoleEntity;
-import com.walden.service.ISelectService;
+import com.walden.dao.server.RoleDao;
+import com.walden.service.database.ISelectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

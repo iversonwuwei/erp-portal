@@ -14,11 +14,11 @@ public class OrderEntity {
     private String customer_name;
     private String customer_contact;
     private String turf_varity;
-    private String turf_quanutity;
+    private int turf_quanutity;
     private String cutter;
     private String layer;
     private String driver;
-    private String total_price;
+    private float total_price;
     private String address_detail;
     private String delivery_date_time;
     private String submitted_date_time;
@@ -100,12 +100,12 @@ public class OrderEntity {
     }
 
     @Column(name = "total_price")
-    public String getTotal_price() {
+    public float getTotal_price() {
         return total_price;
     }
 
     @Column(name = "turf_quanutity")
-    public String getTurf_quanutity() {
+    public int getTurf_quanutity() {
         return turf_quanutity;
     }
 
@@ -178,11 +178,11 @@ public class OrderEntity {
         this.submitted_date_time = submitted_date_time;
     }
 
-    public void setTotal_price(String total_price) {
+    public void setTotal_price(float total_price) {
         this.total_price = total_price;
     }
 
-    public void setTurf_quanutity(String turf_quanutity) {
+    public void setTurf_quanutity(int turf_quanutity) {
         this.turf_quanutity = turf_quanutity;
     }
 
