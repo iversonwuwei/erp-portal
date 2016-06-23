@@ -3,8 +3,9 @@
         "-//Hibernate/Hibernate Configuration DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
+
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/goTurf</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/goturf</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <mapping class="com.walden.entity.CompanyEntity"/>
         <mapping class="com.walden.entity.CutterEntity"/>
@@ -15,6 +16,7 @@
         <mapping class="com.walden.entity.StatusEntity"/>
         <mapping class="com.walden.entity.IsOnlineEntity"/>
         <mapping class="com.walden.entity.OrderEntity"/>
+        <mapping class="com.walden.entity.TurfMail"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>
