@@ -5,5 +5,5 @@ package com.walden.service;
  */
 public interface ISelectAllDraftFile {
     
-    String selectAll();
+    Object selectAll();
 }

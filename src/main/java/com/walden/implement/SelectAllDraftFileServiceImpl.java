@@ -2,6 +2,8 @@ package com.walden.implement;
 
 import com.walden.common.IRead;
 import com.walden.service.ISelectAllDraftFile;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +17,8 @@ public class SelectAllDraftFileServiceImpl implements ISelectAllDraftFile {
     private IRead readAllJsonFile;
 
     @Override
-    public String selectAll() {
-        String jsonString = (String) readAllJsonFile.readAllFiles();
+    public Object selectAll() {
+        JSONArray jsonString = (JSONArray) readAllJsonFile.readAllFiles();
         return jsonString;
     }
 }

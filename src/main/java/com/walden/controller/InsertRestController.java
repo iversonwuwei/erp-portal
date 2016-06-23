@@ -19,9 +19,9 @@ import javax.ws.rs.core.MediaType;
  */
 @Controller
 @Path("/insert")
-public class InsertRestfulController {
+public class InsertRestController {
 
-    private static final Logger logger = LogManager.getLogger(InsertRestfulController.class);
+    private static final Logger logger = LogManager.getLogger(InsertRestController.class);
     @Autowired
     private IInsertService iInsertService;
     private OrderEntity orderEntity;

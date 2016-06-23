@@ -38,7 +38,7 @@ public class Test {
     private Map<String, List> maps;
 
     public Map<String, List> getMap(){
-        maps = new HashMap<>();
+        maps = new HashMap<String, List>();
         maps.put(DRIVERS, driverSelectService.selectAll());
         maps.put(CUTTERS, cutterSelectService.selectAll());
         maps.put(LAYERS, layerSelectService.selectAll());
